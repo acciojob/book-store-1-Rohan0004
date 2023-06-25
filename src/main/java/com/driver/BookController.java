@@ -97,7 +97,7 @@ public class BookController {
     // pass author name as request param
     // getBooksByAuthor()
     @GetMapping("/get-books-by-author")
-    public ResponseEntity getBooksByAuthor(@RequestParam("authorName") String authorName){
+    public ResponseEntity getBooksByAuthor(@RequestParam("author") String authorName){
         List<Book> books=new ArrayList<>();
         for (Book book:bookList) {
             if(book.getAuthor().equals(authorName)) books.add(book);
